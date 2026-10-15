@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISTARI Tecnologia — ERPs, Portais Web e IA sob medida</title>
+
+  <!-- SEO -->
+  <meta name="description" content="A Istari projeta e constrói ERPs sob medida, portais web de alta performance e agentes de inteligência artificial para empresas que precisam de sistemas confiáveis, rápidos e feitos para durar.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://istari.tech/">
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ISTARI Tecnologia">
+  <meta property="og:title" content="ISTARI Tecnologia — ERPs, Portais Web e IA sob medida">
+  <meta property="og:description" content="Projetamos ERPs customizados, portais web e agentes de IA que substituem sistemas legados por uma operação veloz e integrada.">
+  <meta property="og:url" content="https://istari.tech/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ISTARI Tecnologia — ERPs, Portais Web e IA sob medida">
+  <meta name="twitter:description" content="Projetamos ERPs customizados, portais web e agentes de IA que substituem sistemas legados por uma operação veloz e integrada.">
+
+  <!-- Favicon (cristal em SVG, sem depender de arquivo externo) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23020617'/%3E%3Cpolygon points='32,10 43,26 32,44 21,26' fill='%2338bdf8' stroke='%23e6c364' stroke-width='2'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans for high-tech arcane aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
+  <!-- Tone.js (feedback sonoro) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+  <!-- Configuração do tema Tailwind -->
+  <script src="assets/js/tailwind.config.js"></script>
+  <!-- Estilos próprios -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-arcane-950 text-slate-200 font-sans antialiased selection:bg-lumina-cyan selection:text-arcane-950 overflow-x-hidden relative min-h-screen">
+
+  <!-- Arcane Ambient Canvas (Glowing Runes & Celestial Energy) -->
+  <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-60"></canvas>
+
+  <!-- Sound fx toggle feedback audio bar -->
+  
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-arcane-950/70 border-b border-lumina-gold/15 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Crystal in braided golden roots) -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-arcane-900 border border-lumina-gold/40 shadow-[0_0_15px_rgba(230,195,100,0.25)] group-hover:border-lumina-cyan group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300">
+          <!-- SVG recreation of the crystal embraced by golden roots -->
+          <svg class="w-8 h-8 transform group-hover:scale-105 transition-transform" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Braided Roots / Branches -->
+            <path d="M22 56C22 56 26 44 26 36C26 28 32 20 32 20C32 20 38 28 38 36C38 44 42 56 42 56" stroke="#e6c364" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 48C24 46 28 36 30 30" stroke="#e6c364" stroke-width="2" stroke-linecap="round"/>
+            <path d="M46 48C40 46 36 36 34 30" stroke="#e6c364" stroke-width="2" stroke-linecap="round"/>
+            <!-- Arcane Crystal Core -->
+            <polygon points="32,6 43,24 32,44 21,24" fill="rgba(56,189,248,0.35)" stroke="#38bdf8" stroke-width="1.8"/>
+            <polygon points="32,6 38,24 32,44 26,24" fill="rgba(230,195,100,0.25)" stroke="#ffd875" stroke-width="1"/>
+            <line x1="21" y1="24" x2="43" y2="24" stroke="#e6c364" stroke-width="1" stroke-dasharray="2 1"/>
+            <!-- Neon Nodes -->
+            <circle cx="32" cy="6" r="2" fill="#38bdf8"/>
+            <circle cx="43" cy="24" r="1.5" fill="#ffd875"/>
+            <circle cx="21" cy="24" r="1.5" fill="#ffd875"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-cinzel text-xl font-bold tracking-widest text-rune-gold">ISTARI</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-lumina-cyan font-mono font-medium -mt-1">Soluções digitais</span>
+        </div>
+      </a>
+
+      <!-- Action Button & Mobile Trigger -->
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-lumina-gold/20 via-lumina-gold/10 to-lumina-cyan/20 border border-lumina-gold text-lumina-brightGold text-xs font-semibold uppercase tracking-wider hover:bg-lumina-gold hover:text-arcane-950 transition-all duration-300 shadow-[0_0_20px_rgba(230,195,100,0.2)] hover:shadow-[0_0_25px_rgba(230,195,100,0.5)]">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span>Iniciar Projeto</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2.5 rounded-xl border border-lumina-gold/30 bg-arcane-900 text-slate-300 hover:text-white" aria-label="Abrir menu">
+          <i data-lucide="menu" id="menuIcon" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[92vh] flex items-center justify-center pt-10 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden circuit-pattern">
+    
+    <!-- Ambient glowing orbs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-lumina-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-lumina-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <!-- Hero Left: Strategic Copywriting -->
+      <div class="lg:col-span-12 text-center space-y-7">
+        
+        <!-- Arcane Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-arcane-900/80 border border-lumina-gold/40 text-xs font-mono text-lumina-brightGold backdrop-blur-md shadow-[0_0_15px_rgba(230,195,100,0.15)]">
+          <span class="w-2 h-2 rounded-full bg-lumina-cyan animate-ping"></span>
+          <span>ARQUITETURA DIGITAL • SOLUÇÕES EM TECNOLOGIA</span>
+        </div>
+
+        <!-- Majestic Headline inspired by the images -->
+        <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+          FORJAMOS A TECNOLOGIA <br>
+          <span class="text-rune-gold">QUE SUSTENTA</span> <br>
+          <span class="text-rune-cyan text-3xl sm:text-4xl lg:text-5xl">O CRESCIMENTO DA SUA EMPRESA.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+          A Istari projeta e constrói <strong>ERPs sob medida</strong>, portais web de alta performance e agentes de inteligência artificial para empresas que precisam de sistemas confiáveis, rápidos e feitos para durar.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <a href="#contato" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-lumina-brightGold via-lumina-gold to-lumina-darkGold text-arcane-950 font-bold text-sm tracking-wider uppercase hover:shadow-[0_0_30px_rgba(230,195,100,0.6)] hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 text-center">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Falar com um desenvolvedor</span>
+          </a>
+          <a href="#solucoes" class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel border border-lumina-cyan/40 text-lumina-cyan hover:border-lumina-cyan hover:text-white font-medium text-sm tracking-wider uppercase hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transition-all duration-300 flex items-center justify-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>Ver Soluções</span>
+          </a>
+        </div>
+
+       
+
+      </div>
+
+      
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Runic Energy Stream Bridge (Inspired by image 1) -->
+    <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-arcane-950 to-transparent pointer-events-none"></div>
+  </section>
+
+  <!-- Trio Glassmorphic Feature Pillars (Directly inspired by Image 1) -->
+  <section class="relative z-20 -mt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Pillar 1: Ethical AI / Data Stream -->
+      <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-lumina-cyan transition-all duration-500 hover:-translate-y-2">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-lumina-cyan/10 rounded-full blur-2xl group-hover:bg-lumina-cyan/20 transition-all"></div>
+        
+        <div class="w-14 h-14 rounded-2xl bg-arcane-900 border border-lumina-cyan/40 flex items-center justify-center text-lumina-cyan mb-6 group-hover:scale-110 shadow-[0_0_20px_rgba(56,189,248,0.2)] transition-all">
+          <i data-lucide="cpu" class="w-7 h-7"></i>
+        </div>
+
+        <div class="font-mono text-xs text-lumina-cyan tracking-widest uppercase mb-1">Pilar I • Inteligência Viva</div>
+        <h3 class="font-cinzel text-xl font-bold text-rune-gold mb-3 group-hover:text-lumina-brightGold transition-colors">
+          Inteligência Artificial Aplicada
+        </h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Automação real com pipelines de IA privados, RAG sobre os seus próprios dados e modelos analíticos integrados diretamente ao banco de dados da empresa — sem enviar informação sensível para terceiros.
+        </p>
+
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-lumina-brightGold">
+          <span>Automações e Analises de Dados</span>
+          
+        </div>
+      </div>
+
+      <!-- Pillar 2: Harmonious Design / Architecture -->
+      <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-lumina-gold transition-all duration-500 hover:-translate-y-2 border-lumina-gold/40 shadow-[0_0_30px_rgba(230,195,100,0.1)]">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-lumina-gold/10 rounded-full blur-2xl group-hover:bg-lumina-gold/25 transition-all"></div>
+        
+        <div class="w-14 h-14 rounded-2xl bg-arcane-900 border border-lumina-gold/60 flex items-center justify-center text-lumina-brightGold mb-6 group-hover:scale-110 shadow-[0_0_20px_rgba(230,195,100,0.25)] transition-all">
+          <i data-lucide="git-branch" class="w-7 h-7"></i>
+        </div>
+
+        <div class="font-mono text-xs text-lumina-brightGold tracking-widest uppercase mb-1">Pilar II • Estrutura Orgânica</div>
+        <h3 class="font-cinzel text-xl font-bold text-rune-gold mb-3 group-hover:text-lumina-brightGold transition-colors">
+          DESIGN INTELIGENTE E PERSONALIZADO
+        </h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Interfaces pensadas para o seu usuário real e arquiteturas modulares que crescem junto com a demanda da sua operação, sem retrabalho a cada nova etapa.
+        </p>
+
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-lumina-brightGold">
+          <span> Estruturas Escaláveis</span>
+         
+        </div>
+      </div>
+
+      <!-- Pillar 3: Covenant Networks / Cloud & Security -->
+      <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-lumina-teal transition-all duration-500 hover:-translate-y-2">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-lumina-teal/10 rounded-full blur-2xl group-hover:bg-lumina-teal/20 transition-all"></div>
+        
+        <div class="w-14 h-14 rounded-2xl bg-arcane-900 border border-lumina-teal/40 flex items-center justify-center text-lumina-teal mb-6 group-hover:scale-110 shadow-[0_0_20px_rgba(45,212,191,0.2)] transition-all">
+          <i data-lucide="shield-check" class="w-7 h-7"></i>
+        </div>
+
+        <div class="font-mono text-xs text-lumina-teal tracking-widest uppercase mb-1">Pilar III • Aliança Inviolável</div>
+        <h3 class="font-cinzel text-xl font-bold text-rune-gold mb-3 group-hover:text-lumina-brightGold transition-colors">
+          SEGURANÇA
+        </h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Criptografia de ponta a ponta, microsserviços desacoplados e conformidade total com a LGPD e padrões internacionais de segurança da informação.
+        </p>
+
+        <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-lumina-brightGold">
+          <span>Conexões Blindadas</span>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION: Complete Services & Solutions Portfolio -->
+  <section id="solucoes" class="py-24 bg-arcane-900/40 relative border-t border-b border-lumina-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col items-center text-center mb-16 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lumina-gold/10 border border-lumina-gold/30 text-xs font-mono text-lumina-brightGold mb-3">
+            <span>SOLUÇÕES DE PONTA A PONTA</span>
+          </div>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-rune-gold">
+            O QUE CONSTRUÍMOS PARA A SUA EMPRESA
+          </h2>
+        </div>
+        
+        <p class="text-slate-400 text-sm max-w-md">
+          Da concepção visual que reflete a identidade da sua marca até a infraestrutura segura e escalável por trás dela.
+        </p>
+      </div>
+
+      <!-- Solutions Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Custom ERPs -->
+        <div class="glass-panel p-8 rounded-3xl group hover:border-lumina-brightGold transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-arcane-950 border border-lumina-gold/40 flex items-center justify-center text-lumina-brightGold group-hover:scale-110 transition">
+              <i data-lucide="database" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-slate-100 group-hover:text-lumina-brightGold transition">
+              ERPs & Plataformas de Gestão Sob Medida
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Desenvolvimento de ERPs proprietários 100% alinhados à lógica do seu negócio. Módulos de faturamento, estoque e demais necessidades unificadas.
+            </p>
+            <ul class="space-y-2 text-xs font-mono text-slate-400 pt-2">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Zero custo com licenças por usuário
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Sincronia offline-first para equipes externas
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Controle de permissões hierárquico militar
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#contato" class="text-xs font-semibold text-lumina-brightGold flex items-center gap-1 hover:gap-2 transition-all">
+              <span>Projetar ERP para minha operação</span>
+              
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: High Performance Web Apps -->
+        <div class="glass-panel p-8 rounded-3xl group hover:border-lumina-cyan transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-arcane-950 border border-lumina-cyan/40 flex items-center justify-center text-lumina-cyan group-hover:scale-110 transition">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-slate-100 group-hover:text-lumina-cyan transition">
+              Portais Web & Plataformas SaaS
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Websites institucionais e marketplaces construídos para serem utilizados de forma orgânica, arquitetura de microfrontends e designs que encantam investidores e clientes.
+            </p>
+            <ul class="space-y-2 text-xs font-mono text-slate-400 pt-2">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-cyan"></i> Design responsivo e mobile-first
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-cyan"></i> Animações fluidas 
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-cyan"></i> SEO técnico e alta performance
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#contato" class="text-xs font-semibold text-lumina-cyan flex items-center gap-1 hover:gap-2 transition-all">
+              <span>Desenvolver novo Portal Web</span>
+              
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Custom AI & Agent Workflows -->
+        <div class="glass-panel p-8 rounded-3xl group hover:border-lumina-teal transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-arcane-950 border border-lumina-teal/40 flex items-center justify-center text-lumina-teal group-hover:scale-110 transition">
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-cinzel text-xl font-bold text-slate-100 group-hover:text-lumina-teal transition">
+              Agentes Autônomos de IA & RAG
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Transforme a base de conhecimento e documentos jurídicos/técnicos da sua empresa em agentes de IA inteligentes capazes de tomar decisões e atender clientes 24 horas por dia.
+            </p>
+            <ul class="space-y-2 text-xs font-mono text-slate-400 pt-2">
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Dados protegidos e sem vazamento para terceiros
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Integração com WhatsApp, Slack e ERPs
+              </li>
+              <li class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-lumina-teal"></i> Extração inteligente de PDFs, notas e relatórios
+              </li>
+            </ul>
+          </div>
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="#contato" class="text-xs font-semibold text-lumina-teal flex items-center gap-1 hover:gap-2 transition-all">
+              <span>Implantar Inteligência Artificial</span>
+              
+            </a>
+          </div>
+        </div>
+
+       
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- SECTION: Proven Cases & Transformational Metrics -->
+  <section id="cases" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lumina-gold/10 border border-lumina-gold/30 text-xs font-mono text-lumina-brightGold">
+          <span>CASES DE SUCESSO</span>
+        </div><br><br><br>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-rune-gold">
+          O QUE UMA ARQUITETURA BEM FEITA PODE FAZER
+        </h2>
+       
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Case 1 -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-4 hover:border-lumina-cyan transition-all duration-300">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-lumina-cyan">Logística</span>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-slate-100">ERP consolidado</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+           Criação de um ERP qe controla loja e fábrica em tempo real com geração de graficos interativos para melhor visualização de metas e controle de fluxo de caixa.
+          </p>
+          
+        </div>
+
+        <!-- Case 2 -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-4 hover:border-lumina-gold transition-all duration-300 border-lumina-gold/40">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-lumina-brightGold">Automação</span>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-slate-100">Gerador de documentos</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Desenvolvimento do portal web gerador de documentos administrativos com armazenamento e backup seguro em nuvem. 
+          </p>
+          
+        </div>
+
+        <!-- Case 3 -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl space-y-4 hover:border-lumina-teal transition-all duration-300">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-lumina-teal">Empresa 4.0</span>
+          </div>
+          <h3 class="font-cinzel text-lg font-bold text-slate-100">Ecossistema de agendamento e controle</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Plataforma de agendamento automatizado e ERP com previsão de consumo e envio automático de mensagens via APIs com lembretes de agendamento.
+          </p>
+          
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: Contact & Blueprint Consultation -->
+  <section id="contato" class="py-24 relative circuit-pattern">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border-lumina-gold/40 shadow-2xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-lumina-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="text-center space-y-3 mb-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lumina-gold/10 border border-lumina-gold/30 text-xs font-mono text-lumina-brightGold">
+            <span>AUDITORIA TÉCNICA E ORÇAMENTO</span>
+          </div>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-rune-gold">
+            CONVERSE COM OS NOSSOS DESENVOLVEDORES
+          </h2>
+          <p class="text-slate-300 text-sm max-w-xl mx-auto">
+            Sem intermediários comerciais superficiais. Você falará diretamente com profissionais que entenderão a anatomia da sua empresa.
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="space-y-6">
+          <!-- Honeypot anti-spam: invisível para pessoas, bots costumam preencher -->
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="contactName" class="block text-xs font-mono text-slate-300 uppercase mb-2">Seu Nome / Cargo *</label>
+              <input type="text" required id="contactName" name="name" placeholder="Ex: Dra. Elen Gomes (CTO)" class="w-full px-4 py-3 rounded-xl bg-arcane-950/80 border border-slate-800 focus:border-lumina-cyan focus:outline-none text-sm text-slate-100 transition">
+            </div>
+
+            <div>
+              <label for="contactEmail" class="block text-xs font-mono text-slate-300 uppercase mb-2">E-mail *</label>
+              <input type="email" required id="contactEmail" name="email" placeholder="nome@empresa.com.br" class="w-full px-4 py-3 rounded-xl bg-arcane-950/80 border border-slate-800 focus:border-lumina-cyan focus:outline-none text-sm text-slate-100 transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="contactPhone" class="block text-xs font-mono text-slate-300 uppercase mb-2">Telefone / WhatsApp *</label>
+              <input type="tel" required id="contactPhone" name="phone" placeholder="(11) 98765-4321" class="w-full px-4 py-3 rounded-xl bg-arcane-950/80 border border-slate-800 focus:border-lumina-cyan focus:outline-none text-sm text-slate-100 transition">
+            </div>
+
+            <div>
+              <label for="contactService" class="block text-xs font-mono text-slate-300 uppercase mb-2">Interesse Principal</label>
+              <select id="contactService" name="service" class="w-full px-4 py-3 rounded-xl bg-arcane-950/80 border border-slate-800 focus:border-lumina-cyan focus:outline-none text-sm text-slate-100 transition">
+                <option value="erp">Sistema ERP / Gestão Completa</option>
+                <option value="portal">Site / Portal Web de Alta Performance</option>
+                <option value="ai">Agentes Autônomos de IA & RAG</option>
+                <option value="migracao">Modernização de Sistema Legado</option>
+                <option value="consultoria">Auditoria de Código & Arquitetura</option>
+                <option value="outro">Outro / Consultoria Técnica</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="contactMsg" class="block text-xs font-mono text-slate-300 uppercase mb-2">Conte sobre o desafio ou projeto atual</label>
+            <textarea rows="4" id="contactMsg" name="message" placeholder="Quais processos precisam ser automatizados? Quantos usuários acessarão? Qual o gargalo atual da sua empresa?" class="w-full px-4 py-3 rounded-xl bg-arcane-950/80 border border-slate-800 focus:border-lumina-cyan focus:outline-none text-sm text-slate-100 transition"></textarea>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <i data-lucide="shield" class="w-4 h-4 text-lumina-gold"></i>
+            <span>Garantia de Acordo de Confidencialidade (NDA) imediato antes de qualquer compartilhamento de dados.</span>
+          </div>
+
+          <button type="submit" id="contactSubmitBtn" class="w-full py-4 rounded-full bg-gradient-to-r from-lumina-brightGold via-lumina-gold to-lumina-darkGold text-arcane-950 font-bold text-sm uppercase tracking-wider hover:shadow-[0_0_30px_rgba(230,195,100,0.6)] transition-all duration-300 flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span id="contactSubmitLabel">Enviar mensagem</span>
+          </button>
+          <p class="text-center text-[11px] text-slate-500 -mt-2">
+            Sua mensagem chega direto no WhatsApp da nossa equipe — sem etapas extras.
+          </p>
+          <p class="text-center text-[11px] text-slate-500">
+            Prefere e-mail? Escreva para <a href="mailto:istaritecnologia@gmail.com" class="text-lumina-cyan hover:underline">istaritecnologia@gmail.com</a>
+          </p>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-arcane-950 border-t border-lumina-gold/15 py-16 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+      
+      <!-- Brand column -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-arcane-900 border border-lumina-gold/50 flex items-center justify-center text-lumina-brightGold">
+            <i data-lucide="gem" class="w-4 h-4"></i>
+          </div>
+          <span class="font-cinzel text-lg font-bold text-rune-gold">ISTARI</span>
+        </div>
+        <p class="leading-relaxed text-slate-400">
+          Engenharia de software de alto impacto, ERPs sob medida e sistemas digitais que fundem a robustez dos clássicos com a inteligência do futuro.
+        </p>
+        
+      </div>
+
+      <!-- Links Soluções -->
+      <div class="space-y-3">
+        <h5 class="font-cinzel text-sm font-bold text-slate-200">Soluções</h5>
+        <ul class="space-y-2">
+          <li><a href="#solucoes" class="hover:text-lumina-cyan transition">ERPs & Plataformas de Gestão</a></li>
+          <li><a href="#solucoes" class="hover:text-lumina-brightGold transition">Portais Web & E-Commerce</a></li>
+          <li><a href="#solucoes" class="hover:text-lumina-cyan transition">Agentes de Inteligência Artificial</a></li>
+          <li><a href="#solucoes" class="hover:text-lumina-brightGold transition">Modernização de Legados</a></li>
+        </ul>
+      </div>
+
+      <!-- Engenharia & Princípios -->
+      <div class="space-y-3">
+        <h5 class="font-cinzel text-sm font-bold text-slate-200">Engenharia</h5>
+        <ul class="space-y-2">
+          <li><a href="#arquitetura" class="hover:text-lumina-teal transition">Clean Architecture & DDD</a></li>
+          <li><a href="#arquitetura" class="hover:text-lumina-cyan transition">Segurança & Criptografia</a></li>
+          <li><a href="#cases" class="hover:text-lumina-teal transition">Benchmarks de Performance</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato Rápido -->
+      <div class="space-y-3">
+        <h5 class="font-cinzel text-sm font-bold text-slate-200">Sede & Contato</h5>
+        <p>Lorena • SP | Atendimento Global</p>
+        <p class="font-mono text-lumina-brightGold">istaritecnologia@gmail.com</p>
+        <p class="font-mono text-slate-400"><a href="tel:+5562996948817" class="hover:text-lumina-cyan transition">(62) 9 9694-8817</a></p>
+        <div class="flex items-center gap-3 pt-2 text-slate-300">
+          <a href="https://github.com/DiegoDCG89" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2 rounded-lg bg-arcane-900 border border-slate-800 hover:text-lumina-cyan transition"><i data-lucide="github" class="w-4 h-4"></i></a>
+          <a href="https://www.linkedin.com/in/diego-carneiro-gon%C3%A7alo-00b6a526a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="p-2 rounded-lg bg-arcane-900 border border-slate-800 hover:text-lumina-gold transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="https://wa.me/5562996948817" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="p-2 rounded-lg bg-arcane-900 border border-slate-800 hover:text-lumina-teal transition"><i data-lucide="message-square" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
+      <p>© 2026 ISTARI Technologies. Todos os direitos reservados.</p>
+      <p class="mt-2 sm:mt-0 font-mono">Crafting Tomorrow. Inspired by the Ages.</p>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Container -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none glass-panel p-4 rounded-2xl border-lumina-cyan flex items-center gap-3 shadow-2xl max-w-sm">
+    <div class="w-8 h-8 rounded-xl bg-lumina-cyan/20 border border-lumina-cyan text-lumina-cyan flex items-center justify-center">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div>
+      <div id="toastTitle" class="text-xs font-bold text-slate-100 font-mono">Sucesso</div>
+      <div id="toastDesc" class="text-[11px] text-slate-300">Mensagem transmitida.</div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
