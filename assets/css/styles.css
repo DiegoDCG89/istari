@@ -23,12 +23,6 @@
   box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 
-.glass-panel-cyan {
-  background: linear-gradient(135deg, rgba(8, 30, 42, 0.7) 0%, rgba(6, 17, 23, 0.9) 100%);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  box-shadow: 0 10px 30px -5px rgba(56, 189, 248, 0.15), inset 0 0 12px rgba(56, 189, 248, 0.05);
-}
 
 /* Runic Golden Glow Text */
 .text-rune-gold {
@@ -51,19 +45,3 @@
   background-position: 0 0, 16px 16px;
 }
 
-/* Glowing HUD Curved Ring */
-.hud-border {
-  position: relative;
-}
-.hud-border::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(90deg, rgba(230,195,100,0.6), transparent 40%, rgba(56,189,248,0.7) 70%, transparent);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
