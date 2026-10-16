@@ -1,6 +1,5 @@
 import { SITE_CONFIG } from '../config.js';
 import { sendContact, buildWhatsAppUrl, isAutomationConfigured } from '../services/contactService.js';
-import { playChime } from '../ui/sound.js';
 import { showToast } from '../ui/toast.js';
 import { initPhoneMask, isValidPhone } from '../ui/phoneMask.js';
 
@@ -59,12 +58,10 @@ export function initContactForm() {
     if (data.honeypot) return; // bot: ignora em silêncio
 
     if (!data.name || !data.email) {
-      playChime([349.23, 293.66]);
       showToast('Faltam alguns dados', 'Preencha nome e e-mail antes de enviar.');
       return;
     }
     if (!isValidPhone(data.phone)) {
-      playChime([349.23, 293.66]);
       showToast('Telefone inválido', 'Informe o DDD e o número, ex.: (62) 99694-8817.');
       form.elements.phone.focus();
       return;
@@ -79,8 +76,7 @@ export function initContactForm() {
     setSending(button, label, true);
     try {
       await sendContact(data);
-      playChime([523.25, 659.25, 783.99, 1046.5]);
-      if (usesWhatsAppFallback()) {
+        if (usesWhatsAppFallback()) {
         showToast('Mensagem registrada!', 'Confirme o envio na janela do WhatsApp que abriu para falarmos agora.');
       } else {
         showToast('Mensagem enviada!', `Obrigado, ${data.name}! Nossa equipe já recebeu seu contato.`);
@@ -88,7 +84,6 @@ export function initContactForm() {
       form.reset();
     } catch (err) {
       console.error(err);
-      playChime([349.23, 293.66]);
       showToast('Não foi possível enviar', 'Tente novamente ou chame direto no WhatsApp: (62) 9 9694-8817.');
     } finally {
       setSending(button, label, false);
