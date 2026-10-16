@@ -14,7 +14,7 @@ const SITE_CONFIG = Object.freeze({
     // Enquanto estiver vazio, o envio automático para o WhatsApp fica inativo.
     automationWebhook: '',
     // Backup: cada mensagem também chega no painel/e-mail do Formspree.
-    formspree: 'https://formspree.io/f/mvkgadoz',
+    formspree: 'https://formspree.io/f/xdeayvqg',
   },
 
   // Enquanto o webhook não estiver configurado, abre o WhatsApp com a mensagem
