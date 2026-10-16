@@ -23,8 +23,9 @@
   <meta name="twitter:title" content="ISTARI Tecnologia — ERPs, Portais Web e IA sob medida">
   <meta name="twitter:description" content="Projetamos ERPs customizados, portais web e agentes de IA que substituem sistemas legados por uma operação veloz e integrada.">
 
-  <!-- Favicon (cristal em SVG, sem depender de arquivo externo) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23020617'/%3E%3Cpolygon points='32,10 43,26 32,44 21,26' fill='%2338bdf8' stroke='%23e6c364' stroke-width='2'/%3E%3C/svg%3E">
+  <!-- Favicon / ícones -->
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <!-- Google Fonts: Cinzel & Plus Jakarta Sans for high-tech arcane aesthetic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +36,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
-  
   <!-- Configuração do tema Tailwind -->
   <script src="assets/js/tailwind.config.js"></script>
   <!-- Estilos próprios -->
@@ -47,28 +47,16 @@
   <!-- Arcane Ambient Canvas (Glowing Runes & Celestial Energy) -->
   <canvas id="ambientCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-60"></canvas>
 
+  
+
   <!-- Top Navigation Bar -->
   <header class="sticky top-0 z-40 w-full backdrop-blur-xl bg-arcane-950/70 border-b border-lumina-gold/15 transition-all duration-300" id="mainHeader">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo (Crystal in braided golden roots) -->
+      <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="relative w-11 h-11 flex items-center justify-center rounded-xl bg-arcane-900 border border-lumina-gold/40 shadow-[0_0_15px_rgba(230,195,100,0.25)] group-hover:border-lumina-cyan group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300">
-          <!-- SVG recreation of the crystal embraced by golden roots -->
-          <svg class="w-8 h-8 transform group-hover:scale-105 transition-transform" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Braided Roots / Branches -->
-            <path d="M22 56C22 56 26 44 26 36C26 28 32 20 32 20C32 20 38 28 38 36C38 44 42 56 42 56" stroke="#e6c364" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18 48C24 46 28 36 30 30" stroke="#e6c364" stroke-width="2" stroke-linecap="round"/>
-            <path d="M46 48C40 46 36 36 34 30" stroke="#e6c364" stroke-width="2" stroke-linecap="round"/>
-            <!-- Arcane Crystal Core -->
-            <polygon points="32,6 43,24 32,44 21,24" fill="rgba(56,189,248,0.35)" stroke="#38bdf8" stroke-width="1.8"/>
-            <polygon points="32,6 38,24 32,44 26,24" fill="rgba(230,195,100,0.25)" stroke="#ffd875" stroke-width="1"/>
-            <line x1="21" y1="24" x2="43" y2="24" stroke="#e6c364" stroke-width="1" stroke-dasharray="2 1"/>
-            <!-- Neon Nodes -->
-            <circle cx="32" cy="6" r="2" fill="#38bdf8"/>
-            <circle cx="43" cy="24" r="1.5" fill="#ffd875"/>
-            <circle cx="21" cy="24" r="1.5" fill="#ffd875"/>
-          </svg>
+        <div class="relative w-11 h-11 flex items-center justify-center overflow-hidden rounded-xl bg-arcane-900 border border-lumina-gold/40 shadow-[0_0_15px_rgba(230,195,100,0.25)] group-hover:border-lumina-cyan group-hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300">
+          <img src="assets/img/logo.png" alt="Logotipo da Istari" width="44" height="44" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform">
         </div>
         <div class="flex flex-col">
           <span class="font-cinzel text-xl font-bold tracking-widest text-rune-gold">ISTARI</span>
@@ -91,7 +79,14 @@
 
     </div>
 
-    
+    <!-- Menu mobile -->
+    <nav id="mobileDrawer" class="hidden md:hidden border-t border-lumina-gold/15 bg-arcane-950/95 backdrop-blur-xl" aria-label="Menu principal">
+      <div class="px-4 py-4 flex flex-col gap-1 text-sm font-mono uppercase tracking-wider">
+        <a href="#solucoes" class="mobile-nav-link px-3 py-3 rounded-lg text-slate-300 hover:bg-arcane-900 hover:text-lumina-brightGold transition">Soluções</a>
+        <a href="#cases" class="mobile-nav-link px-3 py-3 rounded-lg text-slate-300 hover:bg-arcane-900 hover:text-lumina-brightGold transition">Cases</a>
+        <a href="#contato" class="mobile-nav-link px-3 py-3 rounded-lg text-lumina-brightGold hover:bg-arcane-900 transition">Contato</a>
+      </div>
+    </nav>
   </header>
 
   <!-- Hero Section -->
@@ -136,15 +131,8 @@
           </a>
         </div>
 
-       
-
       </div>
-
-      
-
-        </div>
-
-
+    </div>
 
     <!-- Bottom Runic Energy Stream Bridge (Inspired by image 1) -->
     <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-arcane-950 to-transparent pointer-events-none"></div>
@@ -171,7 +159,7 @@
         </p>
 
         <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-lumina-brightGold">
-          <span>Automações e Analises de Dados</span>
+          <span>Automações e Análises de Dados</span>
           
         </div>
       </div>
@@ -358,8 +346,8 @@
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lumina-gold/10 border border-lumina-gold/30 text-xs font-mono text-lumina-brightGold">
           <span>CASES DE SUCESSO</span>
-        </div><br><br><br>
-        <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-rune-gold">
+        </div>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-rune-gold pt-4">
           O QUE UMA ARQUITETURA BEM FEITA PODE FAZER
         </h2>
        
@@ -374,7 +362,7 @@
           </div>
           <h3 class="font-cinzel text-lg font-bold text-slate-100">ERP consolidado</h3>
           <p class="text-xs text-slate-300 leading-relaxed">
-           Criação de um ERP qe controla loja e fábrica em tempo real com geração de graficos interativos para melhor visualização de metas e controle de fluxo de caixa.
+           Criação de um ERP que controla loja e fábrica em tempo real com geração de gráficos interativos para melhor visualização de metas e controle de fluxo de caixa.
           </p>
           
         </div>
@@ -496,8 +484,8 @@
       <!-- Brand column -->
       <div class="space-y-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-arcane-900 border border-lumina-gold/50 flex items-center justify-center text-lumina-brightGold">
-            <i data-lucide="gem" class="w-4 h-4"></i>
+          <div class="w-8 h-8 rounded-lg overflow-hidden bg-arcane-900 border border-lumina-gold/50">
+            <img src="assets/img/logo.png" alt="Logotipo da Istari" width="32" height="32" class="w-full h-full object-cover">
           </div>
           <span class="font-cinzel text-lg font-bold text-rune-gold">ISTARI</span>
         </div>
@@ -522,8 +510,8 @@
       <div class="space-y-3">
         <h5 class="font-cinzel text-sm font-bold text-slate-200">Engenharia</h5>
         <ul class="space-y-2">
-          <li><a href="#arquitetura" class="hover:text-lumina-teal transition">Clean Architecture & DDD</a></li>
-          <li><a href="#arquitetura" class="hover:text-lumina-cyan transition">Segurança & Criptografia</a></li>
+          <li><a href="#solucoes" class="hover:text-lumina-teal transition">Clean Architecture & DDD</a></li>
+          <li><a href="#solucoes" class="hover:text-lumina-cyan transition">Segurança & Criptografia</a></li>
           <li><a href="#cases" class="hover:text-lumina-teal transition">Benchmarks de Performance</a></li>
         </ul>
       </div>
@@ -532,7 +520,7 @@
       <div class="space-y-3">
         <h5 class="font-cinzel text-sm font-bold text-slate-200">Sede & Contato</h5>
         <p>Lorena • SP | Atendimento Global</p>
-        <p class="font-mono text-lumina-brightGold">istaritecnologia@gmail.com</p>
+        <p class="font-mono text-lumina-brightGold"><a href="mailto:istaritecnologia@gmail.com" class="hover:text-white transition">istaritecnologia@gmail.com</a></p>
         <p class="font-mono text-slate-400"><a href="tel:+5562996948817" class="hover:text-lumina-cyan transition">(62) 9 9694-8817</a></p>
         <div class="flex items-center gap-3 pt-2 text-slate-300">
           <a href="https://github.com/DiegoDCG89" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="p-2 rounded-lg bg-arcane-900 border border-slate-800 hover:text-lumina-cyan transition"><i data-lucide="github" class="w-4 h-4"></i></a>
